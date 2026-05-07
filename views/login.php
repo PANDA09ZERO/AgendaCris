@@ -1,3 +1,36 @@
+// views/usuario.php
+
+<?php
+
+session_start();
+
+require_once __DIR__ . '/../controller/AuthController.php';
+
+$mensaje = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $nombre = trim($_POST['txtUser'] ?? '');
+    $clave = trim($_POST['txtPass'] ?? '');
+
+    if ($nombre === '' || $clave === '') {
+
+        $mensaje = 'Complete todos los campos';
+
+    } else {
+
+        $auth = new AuthController();
+
+        if ($auth->login($nombre, $clave)) {
+
+            header('Location: home.php');
+            exit;
+        }
+
+        $mensaje = 'Correo o clave incorrectos';
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

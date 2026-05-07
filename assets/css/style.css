@@ -1,0 +1,122 @@
+:root{
+    --color-primary: #6b9ed4a2;
+    --color-secundary: #6c757dc1;
+    --color-fondo: #6e9ed285;
+    --color-fondo2: #c36d58a2;
+    --btn-primary: #2dae4ba0;
+    --btn-secundary: #c72b04c0;
+    --color-texto: #5e5c5cc1;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right,var(--color-fondo),var(--color-light),var(--color-fondo2));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.caja{
+    width: 100%;
+    max-width: 320px;
+    background: var(--color-fondo);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 1 10px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    
+}
+
+#frmLogin{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#frmLogin img{
+    width: 120px;
+    margin: 0 auto;
+}
+
+#frmLogin h1{
+    text-align: center;
+    color: var(--color-texto);
+    font-size: 30px;
+    font-style:italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#frmLogin p{
+    text-align: center;
+    color: var(--color-texto);
+    margin-bottom: 10px;
+}
+
+#frmLogin input{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    background: rgba(255,255,255,0.9);
+    transition: 0.3s;
+    text-align: center;
+}
+
+#frmLogin input:focus{
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+.buttons{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.buttons button{
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btnPrimary{
+    background: var(--btn-primary);
+    color: white;
+}
+
+#btnPrimary:hover{
+    transform: translateY(-2px);
+}
+
+#btnSecondary{
+    background: var(--btn-secundary);
+    color: white;
+}
+
+#btnSecondary:hover{
+    transform: translateY(-2px);
+}

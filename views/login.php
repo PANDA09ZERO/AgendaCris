@@ -8,7 +8,7 @@
     <meta name="keywords" content="agenda,gratis,facil,interctiva">
     <meta name="author" content="Panda">
 
-    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon"  href="../image/icono.ico">
 
     <title>Login - AgendaCris</title>
